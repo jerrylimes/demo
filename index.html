@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add_reaction,chess_knight,emoticon,fitness_center,group,health_and_safety,info,left_panel_close,login,notification_add,palette,person_celebrate,send_money,shopping_bag,straighten,view_object_track,work" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add_reaction,arrow_forward,chess_knight,emoticon,fitness_center,group,health_and_safety,info,left_panel_close,login,notification_add,palette,person_celebrate,send_money,shopping_bag,straighten,view_object_track,work" />
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
     <style>
@@ -123,8 +123,8 @@
         }
 
         #index-title-section {
-            margin-top: 40px;
-            margin-bottom: 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         #index-title {
@@ -174,7 +174,7 @@
         .index-img {
             width: 100%;
             height: 500px;
-            border-radius: 6px;
+            border-radius: 10px;
             background-image: url(./rs=w_2046.png);
             background-size: cover;
         }
@@ -214,6 +214,47 @@
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 10px;
+        }
+
+        #subscribe {
+            width: calc(100% - 14px);
+            padding-left: 10px;
+            padding-right: 4px;
+            height: 40px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0 4px 4px hsl(0deg 0% 0% / 0.025),
+                0 8px 8px hsl(0deg 0% 0% / 0.025),
+                0 16px 16px hsl(0deg 0% 0% / 0.025),
+                0 32px 32px hsl(0deg 0% 0% / 0.025);
+        }
+
+        #subscribe-input-section {
+            display: flex;
+        }
+
+        #subscribe-input {
+            border: unset;
+            border: solid 2px #101010;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+
+        #subscribe button {
+            width: 32px;
+            height: 32px;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border: none;
+            background-color: #101010;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -296,13 +337,20 @@
         </div>
     </div>
     <main id="content-section">
+        <div id="subscribe">
+            <p class="normal-text">subscribe to us to get real-time updates</p>
+            <div id="subscribe-input-section">
+                <input type="email" id="subscribe-input">
+                <button type="submit"><span class="material-symbols-outlined">arrow_forward</span></button>
+            </div>
+        </div>
         <div class="index-img"></div>
         <div id="index-title-section">
             <div id="index-title">
-                Your go-to for all things horses.
+                welcome to the streamhorse world
             </div>
             <p class="normal-text second-text">
-                StreamHorseTV is your number one source for all information and updates related to horses.
+                the coolest content for everyone who loves horses
             </p>
         </div>
         <div class="normal-text index-subtitle">
