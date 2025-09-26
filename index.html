@@ -76,10 +76,12 @@
         #link-wrapper {
             font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             padding: 12px;
-            font-size: 22px;
+            font-size: 20px;
             width: 196px;
             transition: all 0.3s;
             opacity: 0;
+            display: flex;
+            flex-wrap: wrap;
             transform: translateX(-220px);
         }
 
@@ -90,10 +92,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .side-link:hover {
-            font-weight: bold;
         }
 
         #more-link-wrapper {
@@ -114,12 +112,13 @@
             align-items: center;
             padding: 6px;
             border-radius: 6px;
-            font-size: 14px;
+            font-size: 18px;
             transition: all 0.2s;
+            font-weight: 300;
         }
 
         .more-link .material-symbols-outlined {
-            font-size: 18px;
+            font-size: 20px;
         }
 
         #index-title-section {
@@ -216,8 +215,15 @@
             margin-bottom: 10px;
         }
 
+        #subscribe-popup{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         #subscribe {
-            width: calc(100% - 14px);
+            width: fit-content;
             padding-left: 10px;
             padding-right: 4px;
             height: 40px;
@@ -227,6 +233,7 @@
             justify-content: space-between;
             align-items: center;
             overflow: hidden;
+            background-color: #fafafa;
             box-shadow: 0 4px 4px hsl(0deg 0% 0% / 0.025),
                 0 8px 8px hsl(0deg 0% 0% / 0.025),
                 0 16px 16px hsl(0deg 0% 0% / 0.025),
@@ -235,6 +242,7 @@
 
         #subscribe-input-section {
             display: flex;
+            margin-left: 30px;
         }
 
         #subscribe-input {
@@ -337,11 +345,13 @@
         </div>
     </div>
     <main id="content-section">
-        <div id="subscribe">
-            <p class="normal-text">subscribe to us to get real-time updates</p>
-            <div id="subscribe-input-section">
-                <input type="email" id="subscribe-input">
-                <button type="submit"><span class="material-symbols-outlined">arrow_forward</span></button>
+        <div id="subscribe-popup">
+            <div id="subscribe">
+                <p class="normal-text">subscribe to us to get real-time updates</p>
+                <div id="subscribe-input-section">
+                    <input type="email" id="subscribe-input">
+                    <button type="submit"><span class="material-symbols-outlined">arrow_forward</span></button>
+                </div>
             </div>
         </div>
         <div class="index-img"></div>
