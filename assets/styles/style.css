@@ -292,20 +292,207 @@
         background-image: url(../images/streamhorsetvhorsepathwhite.svg);
     }
 
-    #sidebar.expanded #logo{
+    #sidebar.expanded #logo {
         background-image: url(../images/streamhorsetvpathwhite.svg);
     }
 
-    #subscribe{
+    #subscribe {
         background-color: #333;
     }
 
-    #subscribe button{
+    #subscribe button {
         background-color: #ffffff;
         color: black;
     }
 
-    #subscribe-input{
+    #subscribe-input {
         border-color: #444;
     }
+
+    .post-card-example {
+        background-image: linear-gradient(rgb(42, 42, 42), transparent);
+    }
+}
+
+#friends-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.friends-profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 6px;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+#friends-pfp-1 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/3-2d3ea78.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-2 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/Tristram%20Hokenson%20%2813%29.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-3 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/11-7390916.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-4 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/2-49b5d3d.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-5 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/71.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-6 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/1-12f14d3.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-7 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/10-57642bb.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-8 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/9-c0788c4.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-9 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/4-65a1d1a.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-10 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/53.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-11 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/Tristram%20Hokenson%20%2812%29.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-12 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/5-cd75b58.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-13 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/15-513216c.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-14 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/33.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-15 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/18-0dc1ed5.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-16 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/jennzellerott.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+#friends-pfp-17 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/7-b83f8ee.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
+}
+
+.generic-image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.generic-image {
+    width: 50vw;
+    aspect-ratio: 16/9;
+    background-size: contain;
+}
+
+#g-i-1 {
+    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/Screenshot%202025-08-24%20082449.png/:/cr=t:0%25,l:0.39%25,w:99.22%25,h:99.22%25/rs=w:1023,cg:true,m);
+}
+
+.first-text {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.collection-exhibit-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.collection-exhibit {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.collection-exhibit iframe {
+    width: 100%;
+}
+
+#site-footer {
+    margin-left: 56px;
+    padding: 6px;
+    width: calc(100% - 62px);
+}
+
+#site-footer.shrink {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+}
+
+.shop-button {
+    width: fit-content;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    background-color: #c8f0ff35;
+    border-radius: 6px;
+    color: unset;
+}
+
+.shop-button .material-symbols-outlined {
+    margin-right: 10px;
+}
+
+.connect {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.connect a {
+    padding: 6px;
+}
+
+.connect svg {
+    width: 2em;
+}
+
+@media (prefers-color-scheme: dark) {
+    .connect svg {
+        fill: white;
+    }
+}
+
+.footer-links {
+    height: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: unset;
+    font-weight: bold;
+    padding: 6px;
 }
