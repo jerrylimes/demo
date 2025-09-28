@@ -1,0 +1,278 @@
+/* layout */
+#sidebar {
+    width: 48px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(1em);
+    transition: all 0.4s cubic-bezier(0, 1, 0, 1);
+    border-radius: 12px;
+    z-index: 2;
+}
+
+#sidebar.expanded {
+    width: 220px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+}
+
+#sidebar.expanded #logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo-wrapper {
+    padding: 6px;
+    align-items: center;
+}
+
+#logo {
+    aspect-ratio: 1/1;
+    height: 40px;
+    background-image: url(../images/streamhorsetvhorsepath.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+#sidebar.expanded #logo {
+    aspect-ratio: 150/43;
+    background-image: url(../images/streamhorsetvpath.svg);
+    background-size: 80%;
+}
+
+#logo:hover,
+.side-link:hover,
+.more-link:hover,
+#sidebar-collapse-button:hover {
+    background-color: #eee;
+}
+
+#link-wrapper {
+    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 6px;
+    font-size: 20px;
+    width: 40px;
+    transition: all 0.3s;
+}
+
+#sidebar.expanded #link-wrapper {
+    padding: 12px;
+    width: 196px;
+}
+
+.side-link {
+    padding: 6px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+}
+
+#sidebar.expanded .side-link {
+    justify-content: unset;
+}
+
+#sidebar.expanded #more-link-wrapper {
+    opacity: 1;
+}
+
+#more-link-wrapper {
+    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 196px;
+    overflow: hidden;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.more-link {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border-radius: 6px;
+    font-size: 18px;
+    transition: all 0.2s;
+    font-weight: 300;
+}
+
+.more-link .material-symbols-outlined {
+    font-size: 20px;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 300,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+#index-title-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#index-title {
+    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#content-section {
+    width: calc(100% - 66px);
+    margin-left: 50px;
+    padding: 6px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0, 1, 0, 1);
+}
+
+#content-section.shrink {
+    width: calc(100% - 238px);
+    margin-left: 220px;
+    padding-right: 12px;
+}
+
+.normal-text {
+    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+
+.second-text {
+    text-align: center;
+    font-size: 20px;
+}
+
+#sidebar-collapse-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sidebar-collapse {
+    opacity: 0.5;
+}
+
+#sidebar.expanded #sidebar-collapse-button {
+    margin-top: 0;
+}
+
+.side-link-label {
+    display: none;
+}
+
+#sidebar.expanded .side-link-label {
+    display: block;
+    margin-left: 14px;
+}
+
+.index-img {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    background-image: url(../images/rs=w_2046.png);
+    background-size: cover;
+}
+
+.index-subtitle {
+    font-size: 24px;
+}
+
+.index-subtitle ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.index-subtitle ul li {
+    display: block;
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    opacity: 0.5;
+}
+
+.posts-categ.highlighted {
+    opacity: 1;
+}
+
+.post-card-example {
+    width: calc(100% - 24px);
+    height: 100px;
+    border-radius: 6px;
+    padding: 12px;
+    background-image: linear-gradient(rgb(219, 219, 219), white);
+    background-size: cover;
+    background-position: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#subscribe-popup {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#subscribe {
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 4px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fafafa;
+    box-shadow: 0 4px 4px hsl(0deg 0% 0% / 0.025),
+        0 8px 8px hsl(0deg 0% 0% / 0.025),
+        0 16px 16px hsl(0deg 0% 0% / 0.025),
+        0 32px 32px hsl(0deg 0% 0% / 0.025);
+}
+
+#subscribe-input-section {
+    display: flex;
+    margin-left: 30px;
+}
+
+#subscribe-input {
+    border: unset;
+    border: solid 2px #101010;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+#subscribe button {
+    width: 32px;
+    height: 32px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border: none;
+    background-color: #101010;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
