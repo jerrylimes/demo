@@ -12,7 +12,6 @@
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(1em);
     transition: all 0.4s cubic-bezier(0, 1, 0, 1);
-    border-radius: 12px;
     z-index: 2;
 }
 
@@ -275,4 +274,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    #sidebar {
+        background-color: transparent;
+    }
+
+    #logo:hover,
+    .side-link:hover,
+    .more-link:hover,
+    #sidebar-collapse-button:hover {
+        background-color: #333;
+    }
+
+    #logo {
+        background-image: url(../images/streamhorsetvhorsepathwhite.svg);
+    }
+
+    #sidebar.expanded #logo{
+        background-image: url(../images/streamhorsetvpathwhite.svg);
+    }
+
+    #subscribe{
+        background-color: #333;
+    }
+
+    #subscribe button{
+        background-color: #ffffff;
+        color: black;
+    }
+
+    #subscribe-input{
+        border-color: #444;
+    }
 }
