@@ -198,7 +198,7 @@
     .carousel-slide {
         width: 300%;
         height: 100%;
-    border-radius: 10px;
+        border-radius: 10px;
         display: flex;
         animation: carousel-animation 15s infinite alternate cubic-bezier(0.5, 0, 0, 1);
 
@@ -209,7 +209,7 @@
     }
 }
 
-.carousel-image{
+.carousel-image {
     border-radius: 10px;
     margin-right: 10px;
 }
@@ -379,6 +379,24 @@
     margin-bottom: 20px;
 }
 
+.carousel.friends {
+    height: 200px;
+}
+
+.friends {
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.friends::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+img.carousel-image {
+    width: 200px !important;
+}
+
 #friends-pfp-1 {
     background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/3-2d3ea78.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
 }
@@ -405,46 +423,6 @@
 
 #friends-pfp-7 {
     background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/10-57642bb.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
-}
-
-#friends-pfp-8 {
-    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/9-c0788c4.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
-}
-
-#friends-pfp-9 {
-    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/4-65a1d1a.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
-}
-
-#friends-pfp-10 {
-    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/53.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
-}
-
-#friends-pfp-11 {
-    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/Tristram%20Hokenson%20%2812%29.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
-}
-
-#friends-pfp-12 {
-    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/5-cd75b58.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
-}
-
-#friends-pfp-13 {
-    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/15-513216c.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
-}
-
-#friends-pfp-14 {
-    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/33.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
-}
-
-#friends-pfp-15 {
-    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/18-0dc1ed5.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
-}
-
-#friends-pfp-16 {
-    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/jennzellerott.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
-}
-
-#friends-pfp-17 {
-    background-image: url(https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/7-b83f8ee.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true);
 }
 
 .generic-image-wrapper {
