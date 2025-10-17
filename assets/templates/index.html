@@ -12,14 +12,27 @@
         </div>
     </div>
     <div class="carousel">
-        <div class="carousel-slide">
+        <button class="carousel-btn left" id="prevBtn">
+            <span class="material-symbols-outlined">
+                arrow_back
+            </span>
+        </button>
+
+        <div class="carousel-slide" id="carouselSlide">
             <img src="https://media.jerryly.cn/1.webp" alt="img-1" class="carousel-image">
             <img src="https://media.jerryly.cn/2.webp" alt="img-2" class="carousel-image">
             <img src="https://media.jerryly.cn/4.webp" alt="img-4" class="carousel-image">
             <img src="https://media.jerryly.cn/5.webp" alt="img-5" class="carousel-image">
             <img src="https://media.jerryly.cn/6.webp" alt="img-6" class="carousel-image">
         </div>
+
+        <button class="carousel-btn right" id="nextBtn">
+            <span class="material-symbols-outlined">
+                arrow_forward
+            </span>
+        </button>
     </div>
+
     <div id="index-title-section">
         <div id="index-title">
             welcome to the streamhorse world
@@ -49,7 +62,13 @@
         follow our friends
     </p>
     <div class="carousel friends">
-        <div class="carousel-slide">
+        <button class="carousel-btn left" id="prevBtn">
+            <span class="material-symbols-outlined">
+                arrow_back
+            </span>
+        </button>
+
+        <div class="carousel-slide" id="carouselSlide">
             <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/3-2d3ea78.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
                 alt="img-1" class="carousel-image">
             <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/Tristram%20Hokenson%20%2813%29.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
@@ -84,8 +103,13 @@
                 alt="img-16" class="carousel-image">
             <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/7-b83f8ee.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
                 alt="img-17" class="carousel-image">
-
         </div>
+
+        <button class="carousel-btn right" id="nextBtn">
+            <span class="material-symbols-outlined">
+                arrow_forward
+            </span>
+        </button>
     </div>
     <p class="normal-text second-text">
         today's youtuber highlight
@@ -234,5 +258,31 @@
     </div>
     <hr>
 </div>
+
+<script>
+    document.querySelectorAll('.carousel').forEach(carousel => {
+        const slide = carousel.querySelector('.carousel-slide');
+        const images = carousel.querySelectorAll('.carousel-image');
+        const totalSlides = images.length;
+        const prevBtn = carousel.querySelector('.carousel-btn.left');
+        const nextBtn = carousel.querySelector('.carousel-btn.right');
+
+        let index = 0;
+
+        function updateSlide() {
+            slide.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            index = (index + 1) % totalSlides;
+            updateSlide();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            index = (index - 1 + totalSlides) % totalSlides;
+            updateSlide();
+        });
+    });
+</script>
 
 {% endblock %}
