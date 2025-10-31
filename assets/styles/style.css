@@ -2,7 +2,7 @@
  * styling by Jerry Li
  */
 
-/* layout */
+/* layout layer */
 
 body {
     margin: 0;
@@ -127,6 +127,27 @@ body {
         'opsz' 24
 }
 
+@media (prefers-color-scheme: dark) {
+    #sidebar {
+        background-color: transparent;
+    }
+
+    #logo:hover,
+    .side-link:hover,
+    .more-link:hover,
+    #sidebar-collapse-button:hover {
+        background-color: #333;
+    }
+
+    #logo {
+        background-image: url(../images/streamhorsetvhorsepathwhite.svg);
+    }
+
+    #sidebar.expanded #logo {
+        background-image: url(../images/streamhorsetvpathwhite.svg);
+    }
+}
+
 /* index layer */
 
 .content-sub {
@@ -156,9 +177,8 @@ body {
 }
 
 .content-section.shrink {
-    width: calc(100% - 238px);
+    width: calc(100% - 221px);
     margin-left: 220px;
-    padding-right: 12px;
 }
 
 .normal-text {
@@ -345,44 +365,6 @@ body {
     align-items: center;
 }
 
-@media (prefers-color-scheme: dark) {
-    #sidebar {
-        background-color: transparent;
-    }
-
-    #logo:hover,
-    .side-link:hover,
-    .more-link:hover,
-    #sidebar-collapse-button:hover {
-        background-color: #333;
-    }
-
-    #logo {
-        background-image: url(../images/streamhorsetvhorsepathwhite.svg);
-    }
-
-    #sidebar.expanded #logo {
-        background-image: url(../images/streamhorsetvpathwhite.svg);
-    }
-
-    #subscribe {
-        background-color: #333;
-    }
-
-    #subscribe button {
-        background-color: #ffffff;
-        color: black;
-    }
-
-    #subscribe-input {
-        border-color: #444;
-    }
-
-    .post-card-example {
-        background-image: linear-gradient(rgb(42, 42, 42), transparent);
-    }
-}
-
 #friends-list {
     display: flex;
     flex-wrap: wrap;
@@ -490,20 +472,22 @@ body {
     align-items: center;
     gap: 10px;
     border-radius: 6px;
-    background-color: #f5f5f5;
+    background-color: black;
+    border: solid 2px #333;
+    color: white;
     padding-left: 10px;
     padding-right: 10px;
     height: 36px;
     margin-top: 10px;
     margin-bottom: 10px;
     text-decoration: none;
-    color: unset;
     transition: all 0.2s;
 }
 
 .collection-exhibit-link:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    border-color: #333;
+    color: black;
 }
 
 .collection-exhibit .second-text {
@@ -522,27 +506,32 @@ body {
     margin-left: 10px;
 }
 
+#iframe-undefined55 {
+    border-radius: 16px;
+    border: solid 1px #eee;
+    padding: 10px;
+    width: calc(100% - 22px) !important;
+}
+
+/* footer layer */
+
 #site-footer {
     margin-left: 50px;
-    padding: 6px;
-    width: calc(100% - 62px);
+    padding: 15px;
+    border-left: solid 1px #eee;
+    width: calc(100% - 81px);
 }
 
 #site-footer.shrink {
     margin-left: 220px;
-    width: calc(100% - 236px);
+    width: calc(100% - 251px);
 }
 
 .shop-button {
-    width: 30%;
-    margin-left: 35%;
     text-decoration: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
-    padding: 6px;
-    background-color: #c8f0ff35;
-    border-radius: 6px;
     color: unset;
 }
 
@@ -551,14 +540,18 @@ body {
 }
 
 .connect {
-    height: 10vh;
+    margin-top: 6px;
+    height: 44px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 
 .connect a {
     padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .connect svg {
@@ -574,25 +567,52 @@ body {
 .footer-links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 
-.footer-links a {
+.footer-links a:not(:first-child) {
     text-decoration: none;
     color: unset;
-    font-weight: bold;
     padding: 6px;
 }
 
-hr {
+.footer-links a:first-child {
+    text-decoration: none;
+    color: unset;
+    padding: 6px;
+    padding-left: 0;
+}
+
+.connect a:not(:first-child) {
+    text-decoration: none;
+    color: unset;
+    padding: 6px;
+}
+
+.connect a:first-child {
+    text-decoration: none;
+    color: unset;
+    padding: 6px;
+    padding-left: 0;
+}
+
+hr:not(:last-child) {
     width: 100%;
     border-color: transparent;
     height: 1px;
     border: none;
     background-color: #eee;
-    margin-top: 25vh;
-    margin-bottom: 25vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+hr:last-child {
+    width: 100%;
+    border-color: transparent;
+    height: 1px;
+    border: none;
+    background-color: #eee;
 }
 
 /* content layer */
@@ -601,4 +621,45 @@ hr {
     font-size: 18px;
     text-align: left;
     font-weight: bold;
+}
+
+/* dark mode for all layers except the layout, placed here for applicability */
+
+@media (prefers-color-scheme: dark) {
+
+    .content-section,
+    #site-footer {
+        border-left-color: #333;
+    }
+
+    hr:not(:last-child),
+    hr:last-child {
+        background-color: #333;
+    }
+
+    #subscribe {
+        background-color: #333;
+    }
+
+    #subscribe button {
+        background-color: #ffffff;
+        color: black;
+    }
+
+    #subscribe-input {
+        border-color: #333;
+    }
+
+    .post-card-example {
+        background-image: linear-gradient(rgb(42, 42, 42), transparent);
+    }
+
+    .collection-exhibit-wrap {
+        border-color: rgba(0, 118, 139, 0.55);
+        background-image: linear-gradient(rgba(0, 118, 139, 0.55), transparent 10%);
+    }
+
+    #iframe-undefined55 {
+        border-color: #333;
+    }
 }
