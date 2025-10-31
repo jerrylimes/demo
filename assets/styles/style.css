@@ -147,7 +147,7 @@ body {
 }
 
 .content-section {
-    width: calc(100% - 50px);
+    width: calc(100% - 51px);
     margin-left: 50px;
     overflow: hidden;
     border-left: solid 1px #eee;
@@ -227,7 +227,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Navigation buttons */
 .carousel-btn {
     position: absolute;
     top: 50%;
