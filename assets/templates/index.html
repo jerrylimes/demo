@@ -2,262 +2,281 @@
 
 {% block content %}
 <div class="content-section">
-    <div id="subscribe-popup">
-        <div id="subscribe">
-            <p class="normal-text">subscribe to us to get real-time updates</p>
-            <div id="subscribe-input-section">
-                <input type="email" id="subscribe-input">
-                <button type="submit"><span class="material-symbols-outlined">arrow_forward</span></button>
+    <section class="content-sub">
+        <div id="subscribe-popup">
+            <div id="subscribe">
+                <p class="normal-text">subscribe to us to get real-time updates</p>
+                <div id="subscribe-input-section">
+                    <input type="email" id="subscribe-input">
+                    <button type="submit"><span class="material-symbols-outlined">arrow_forward</span></button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="carousel">
-        <button class="carousel-btn left" id="prevBtn">
-            <span class="material-symbols-outlined">
-                arrow_back
-            </span>
-        </button>
+        <div class="carousel">
+            <button class="carousel-btn left" id="prevBtn">
+                <span class="material-symbols-outlined">
+                    arrow_back
+                </span>
+            </button>
 
-        <div class="carousel-slide" id="carouselSlide">
-            <img src="https://media.jerryly.cn/1.webp" alt="img-1" class="carousel-image">
-            <img src="https://media.jerryly.cn/2.webp" alt="img-2" class="carousel-image">
-            <img src="https://media.jerryly.cn/4.webp" alt="img-4" class="carousel-image">
-            <img src="https://media.jerryly.cn/5.webp" alt="img-5" class="carousel-image">
-            <img src="https://media.jerryly.cn/6.webp" alt="img-6" class="carousel-image">
-        </div>
-
-        <button class="carousel-btn right" id="nextBtn">
-            <span class="material-symbols-outlined">
-                arrow_forward
-            </span>
-        </button>
-    </div>
-
-    <div id="index-title-section">
-        <div id="index-title">
-            welcome to the streamhorse world
-        </div>
-        <p class="normal-text second-text">
-            the coolest content for everyone who loves horses
-        </p>
-    </div>
-    <div class="normal-text index-subtitle">
-        <ul id="posts-categ-list">
-            <li class="posts-categ" id="highlighted">All Posts</li>
-            <li class="posts-categ">Community Conversations</li>
-            <li class="posts-categ">Equestrian Lifestyle</li>
-            <li class="posts-categ">Equine Business & Finance</li>
-            <li class="posts-categ">Horse & Human Wellness</li>
-            <li class="posts-categ">Olympics</li>
-            <li class="posts-categ">Retiring & Retraining</li>
-            <li class="posts-categ">Rider's Lounge</li>
-        </ul>
-    </div>
-    <a href="./pages/sample.html">
-        <div class="post-card">
-            <div class="post-card-example normal-text">
-                Problem: cannot access complete catalog of blogs, this part will be skipped
+            <div class="carousel-slide" id="carouselSlide">
+                <img src="https://media.jerryly.cn/1.webp" alt="img-1" class="carousel-image">
+                <img src="https://media.jerryly.cn/2.webp" alt="img-2" class="carousel-image">
+                <img src="https://media.jerryly.cn/4.webp" alt="img-4" class="carousel-image">
+                <img src="https://media.jerryly.cn/5.webp" alt="img-5" class="carousel-image">
+                <img src="https://media.jerryly.cn/6.webp" alt="img-6" class="carousel-image">
             </div>
-        </div>
-    </a>
-    <p class="normal-text second-text">
-        follow our friends
-    </p>
-    <div class="carousel friends">
-        <button class="carousel-btn left" id="prevBtn">
-            <span class="material-symbols-outlined">
-                arrow_back
-            </span>
-        </button>
 
-        <div class="carousel-slide" id="carouselSlide">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/3-2d3ea78.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-1" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/Tristram%20Hokenson%20%2813%29.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-2" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/11-7390916.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-3" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/2-49b5d3d.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-4" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/71.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-5" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/1-12f14d3.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-6" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/10-57642bb.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-7" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/9-c0788c4.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-8" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/4-65a1d1a.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-9" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/53.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-10" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/Tristram%20Hokenson%20%2812%29.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-11" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/5-cd75b58.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-12" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/15-513216c.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-13" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/33.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-14" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/18-0dc1ed5.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-15" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/jennzellerott.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-16" class="carousel-image">
-            <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/7-b83f8ee.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
-                alt="img-17" class="carousel-image">
+            <button class="carousel-btn right" id="nextBtn">
+                <span class="material-symbols-outlined">
+                    arrow_forward
+                </span>
+            </button>
         </div>
-
-        <button class="carousel-btn right" id="nextBtn">
-            <span class="material-symbols-outlined">
-                arrow_forward
-            </span>
-        </button>
-    </div>
-    <p class="normal-text second-text">
-        today's youtuber highlight
-    </p>
-    <iframe width="444" height="222" src="https://www.youtube.com/embed/1e6cmsiLKmo"
-        title="How Colorado Horse Rescue Is Forging a Future Where Hope Lives" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="444" height="222" src="https://www.youtube.com/embed/8dB6qDYB8nI"
-        title="CSI5* Major League Showjumping Greenwich - Jump Off" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <p class="normal-text second-text">
-        check out our latest original series
-    </p>
-    <div class="generic-image-wrapper">
-        <div class="generic-image" id="g-i-1"></div>
-    </div>
-    <p class="normal-text first-text">
-        YouTube video collection
-    </p>
-    <div class="collection-exhibit-wrapper">
-        <div class="collection-exhibit">
-            <span class="normal-text second-text">
-                Life
-            </span>
-            <br>
-            <br>
-            <iframe width="444" height="222" src="https://www.youtube.com/embed/sUVJmd4Xcjw"
-                title="A Day in the Life of Modern COWBOYS in MONTANA - What it&#39;s Like!" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div id="index-title-section">
+            <div id="index-title">
+                welcome to the streamhorse world
+            </div>
+            <p class="normal-text second-text">
+                the coolest content for everyone who loves horses
+            </p>
         </div>
-        <div class="collection-exhibit">
-            <span class="normal-text second-text">
-                Compete
-            </span>
-            <br>
-            <br>
-            <iframe width="444" height="222" src="https://www.youtube.com/embed/pwNGyBU7Phg"
-                title="Laura Collett &amp; London 52 claiming the European crown 👑 | Agria FEI Eventing European Championship"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="normal-text index-subtitle">
+            <ul id="posts-categ-list">
+                <li class="posts-categ" id="highlighted">All Posts</li>
+                <li class="posts-categ">Community Conversations</li>
+                <li class="posts-categ">Equestrian Lifestyle</li>
+                <li class="posts-categ">Equine Business & Finance</li>
+                <li class="posts-categ">Horse & Human Wellness</li>
+                <li class="posts-categ">Olympics</li>
+                <li class="posts-categ">Retiring & Retraining</li>
+                <li class="posts-categ">Rider's Lounge</li>
+            </ul>
         </div>
-        <div class="collection-exhibit">
-            <span class="normal-text second-text">
-                Fun
-            </span>
-            <br>
-            <br>
-            <iframe width="444" height="222" src="https://www.youtube.com/embed/PHrvfugEftQ"
-                title="ENZO &amp; I JUMP OUR FIRST CLEAR ROUND XC" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="collection-exhibit">
-            <span class="normal-text second-text">
-                Work
-            </span>
-            <br>
-            <br>
-            <iframe width="444" height="222" src="https://www.youtube.com/embed/pwNGyBU7Phg"
-                title="Laura Collett &amp; London 52 claiming the European crown 👑 | Agria FEI Eventing European Championship"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="collection-exhibit">
-            <span class="normal-text second-text">
-                Discipline
-            </span>
-            <br>
-            <br>
-            <iframe width="444" height="222" src="https://www.youtube.com/embed/2cGrD0rGB6Y"
-                title="Watch the $10,000 IDA Development Grand Prix" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="collection-exhibit">
-            <span class="normal-text second-text">
-                Train
-            </span>
-            <br>
-            <br>
-            <iframe width="444" height="222" src="https://www.youtube.com/embed/_0S_F9vRSbE"
-                title="Bored Horse Hacks! (Easy Exercises)" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </div>
-    <p class="normal-text second-text">check out our YouTube Shorts!</p>
-    <iframe id="iframe-undefined55" frameborder="0"
-        sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation allow-top-navigation"
-        src="javascript: window.frameElement.getAttribute(&quot;srcdoc&quot;);"
-        srcdoc="&lt;script&gt;window.onmessage = function(event) {event.source.postMessage({iframeId: event.data, scrollHeight: document.body.getBoundingClientRect().height || document.body.scrollHeight}, event.origin);};&lt;/script&gt;&lt;body style='margin: 0'&gt;&lt;div class='sk-ww-youtube-shorts' data-embed-id='193578'&gt;&lt;/div&gt;&lt;script src='https://widgets.sociablekit.com/youtube-shorts/widget.js' async defer&gt;&lt;/script&gt;&lt;/body&gt;"
-        style="width: 100%; display: block; height: 1746.5px; overflow: visible; transition: height 1.5s;"
-        spellcheck="false"
-        aria-label="To enrich screen reader interactions, please activate Accessibility in Grammarly extension settings"></iframe>
+        <a href="./pages/sample.html">
+            <div class="post-card">
+                <div class="post-card-example normal-text">
+                    Problem: cannot access complete catalog of blogs, this part will be skipped
+                </div>
+            </div>
+        </a>
+    </section>
     <hr>
-    <div class="collection-exhibit-wrapper">
-        <div class="collection-exhibit">
-            <span class="normal-text second-text">
-                Breed
-            </span>
-            <br>
-            <br>
-            <iframe width="444" height="222" src="https://www.youtube.com/embed/LYS_IEFVSrE"
-                title="Top 5 Bloodlines That Changed Horse Racing Forever!" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <section class="content-sub">
+        <p class="normal-text second-text">
+            follow our friends
+        </p>
+        <div class="carousel friends">
+            <button class="carousel-btn left" id="prevBtn">
+                <span class="material-symbols-outlined">
+                    arrow_back
+                </span>
+            </button>
+
+            <div class="carousel-slide" id="carouselSlide">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/3-2d3ea78.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-1" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/Tristram%20Hokenson%20%2813%29.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-2" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/11-7390916.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-3" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/2-49b5d3d.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-4" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/71.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-5" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/1-12f14d3.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-6" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/10-57642bb.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-7" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/9-c0788c4.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-8" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/4-65a1d1a.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-9" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/53.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-10" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/Tristram%20Hokenson%20%2812%29.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-11" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/5-cd75b58.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-12" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/15-513216c.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-13" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/33.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-14" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/18-0dc1ed5.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-15" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/jennzellerott.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-16" class="carousel-image">
+                <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/7-b83f8ee.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
+                    alt="img-17" class="carousel-image">
+            </div>
+
+            <button class="carousel-btn right" id="nextBtn">
+                <span class="material-symbols-outlined">
+                    arrow_forward
+                </span>
+            </button>
         </div>
-        <div class="collection-exhibit">
-            <span class="normal-text second-text">
-                Art
-            </span>
-            <br>
-            <br>
-            <iframe width="444" height="222" src="https://www.youtube.com/embed/Aylxmmscu5I"
-                title="How Horse Photos Come to Life" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+    <hr>
+    <section class="content-sub">
+        <p class="normal-text second-text">
+            today's youtuber highlight
+        </p>
+        <iframe width="444" height="222" src="https://www.youtube.com/embed/1e6cmsiLKmo"
+            title="How Colorado Horse Rescue Is Forging a Future Where Hope Lives" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="444" height="222" src="https://www.youtube.com/embed/8dB6qDYB8nI"
+            title="CSI5* Major League Showjumping Greenwich - Jump Off" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+    <hr>
+    <section class="content-sub">
+        <p class="normal-text second-text">
+            check out our latest original series
+        </p>
+        <div class="generic-image-wrapper">
+            <div class="generic-image" id="g-i-1"></div>
         </div>
-        <div class="collection-exhibit">
-            <span class="normal-text second-text">
-                Heal
+    </section>
+    <hr>
+    <section class="content-sub">
+        <div class="collection-exhibit-wrap">
+            <span class="normal-text first-text">
+                YouTube video collection
             </span>
-            <br>
-            <br>
-            <iframe width="444" height="222" src="https://www.youtube.com/embed/3iusNx_pqyQ"
-                title="CAST Removal for ARCHIE!" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="collection-exhibit-wrapper">
+                <div class="collection-exhibit">
+                    <a href="https://streamhorse.tv/life" class="collection-exhibit-link">
+                        <span class="normal-text second-text">
+                            Life
+                        </span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                    <iframe width="444" height="222" src="https://www.youtube.com/embed/sUVJmd4Xcjw"
+                        title="A Day in the Life of Modern COWBOYS in MONTANA - What it&#39;s Like!" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="collection-exhibit">
+                    <a href="https://streamhorse.tv/compete" class="collection-exhibit-link">
+                        <span class="normal-text second-text">
+                            Compete
+                        </span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                    <iframe width="444" height="222" src="https://www.youtube.com/embed/pwNGyBU7Phg"
+                        title="Laura Collett &amp; London 52 claiming the European crown 👑 | Agria FEI Eventing European Championship"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="collection-exhibit">
+                    <a href="https://streamhorse.tv/fun" class="collection-exhibit-link">
+                        <span class="normal-text second-text">
+                            Fun
+                        </span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                    <iframe width="444" height="222" src="https://www.youtube.com/embed/PHrvfugEftQ"
+                        title="ENZO &amp; I JUMP OUR FIRST CLEAR ROUND XC" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="collection-exhibit">
+                    <a href="https://streamhorse.tv/work" class="collection-exhibit-link">
+                        <span class="normal-text second-text">
+                            Work
+                        </span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                    <iframe width="444" height="222" src="https://www.youtube.com/embed/pwNGyBU7Phg"
+                        title="Laura Collett &amp; London 52 claiming the European crown 👑 | Agria FEI Eventing European Championship"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="collection-exhibit">
+                    <a href="https://streamhorse.tv/discipline" class="collection-exhibit-link">
+                        <span class="normal-text second-text">
+                            Discipline
+                        </span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                    <iframe width="444" height="222" src="https://www.youtube.com/embed/2cGrD0rGB6Y"
+                        title="Watch the $10,000 IDA Development Grand Prix" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="collection-exhibit">
+                    <a href="https://streamhorse.tv/train" class="collection-exhibit-link">
+                        <span class="normal-text second-text">
+                            Train
+                        </span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                    <iframe width="444" height="222" src="https://www.youtube.com/embed/_0S_F9vRSbE"
+                        title="Bored Horse Hacks! (Easy Exercises)" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
-        <div class="collection-exhibit">
-            <span class="normal-text second-text">
-                Give
-            </span>
-            <br>
-            <br>
-            <iframe width="444" height="222" src="https://www.youtube.com/embed/w3uC24EKkrw"
-                title="What has CHANGED at Tenerife Horse Rescue? - We are back with FINCA LIFE 2025 🐎" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+    <hr>
+    <section class="content-sub">
+        <p class="normal-text second-text">check out our YouTube Shorts!</p>
+        <iframe id="iframe-undefined55" frameborder="0"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation allow-top-navigation"
+            src="javascript: window.frameElement.getAttribute(&quot;srcdoc&quot;);"
+            srcdoc="&lt;script&gt;window.onmessage = function(event) {event.source.postMessage({iframeId: event.data, scrollHeight: document.body.getBoundingClientRect().height || document.body.scrollHeight}, event.origin);};&lt;/script&gt;&lt;body style='margin: 0'&gt;&lt;div class='sk-ww-youtube-shorts' data-embed-id='193578'&gt;&lt;/div&gt;&lt;script src='https://widgets.sociablekit.com/youtube-shorts/widget.js' async defer&gt;&lt;/script&gt;&lt;/body&gt;"
+            style="width: 100%; display: block; height: 1746.5px; overflow: visible; transition: height 1.5s;"
+            spellcheck="false"
+            aria-label="To enrich screen reader interactions, please activate Accessibility in Grammarly extension settings"></iframe>
+    </section>
+    <hr>
+    <section class="content-sub">
+        <div class="collection-exhibit-wrapper">
+            <div class="collection-exhibit">
+                <span class="normal-text second-text">
+                    Breed
+                </span>
+                <iframe width="444" height="222" src="https://www.youtube.com/embed/LYS_IEFVSrE"
+                    title="Top 5 Bloodlines That Changed Horse Racing Forever!" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="collection-exhibit">
+                <span class="normal-text second-text">
+                    Art
+                </span>
+                <iframe width="444" height="222" src="https://www.youtube.com/embed/Aylxmmscu5I"
+                    title="How Horse Photos Come to Life" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="collection-exhibit">
+                <span class="normal-text second-text">
+                    Heal
+                </span>
+                <iframe width="444" height="222" src="https://www.youtube.com/embed/3iusNx_pqyQ"
+                    title="CAST Removal for ARCHIE!" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="collection-exhibit">
+                <span class="normal-text second-text">
+                    Give
+                </span>
+                <iframe width="444" height="222" src="https://www.youtube.com/embed/w3uC24EKkrw"
+                    title="What has CHANGED at Tenerife Horse Rescue? - We are back with FINCA LIFE 2025 🐎"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
-    </div>
+    </section>
     <hr>
 </div>
 
