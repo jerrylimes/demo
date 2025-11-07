@@ -443,8 +443,6 @@ body {
     width: calc(100% - 14px);
     border-radius: 16px;
     padding: 6px;
-    border: solid 1px #7bd7f55d;
-    background-image: linear-gradient(#7bd7f55d, #fdfdfd 10%);
 }
 
 .collection-exhibit-wrapper {
@@ -660,11 +658,6 @@ hr:last-child {
 
     .post-card-example {
         background-image: linear-gradient(rgb(42, 42, 42), transparent);
-    }
-
-    .collection-exhibit-wrap {
-        border-color: rgba(0, 118, 139, 0.55);
-        background-image: linear-gradient(rgba(0, 118, 139, 0.55), transparent 10%);
     }
 
     #iframe-undefined55 {
