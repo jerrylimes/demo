@@ -519,6 +519,7 @@ body {
     margin-left: 50px;
     padding: 15px;
     border-left: solid 1px #eee;
+    border-top: solid 1px #eee;
     width: calc(100% - 81px);
 }
 
@@ -533,6 +534,7 @@ body {
     justify-content: start;
     align-items: center;
     color: unset;
+    opacity: 0.75;
 }
 
 .shop-button .material-symbols-outlined {
@@ -545,6 +547,7 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
+    opacity: 0.75;
 }
 
 .connect a {
@@ -569,6 +572,7 @@ body {
     flex-wrap: wrap;
     justify-content: start;
     align-items: center;
+    opacity: 0.75;
 }
 
 .footer-links a:not(:first-child) {
@@ -630,6 +634,10 @@ hr:last-child {
     .content-section,
     #site-footer {
         border-left-color: #333;
+    }
+
+    #site-footer {
+        border-top-color: #333;
     }
 
     hr:not(:last-child),
