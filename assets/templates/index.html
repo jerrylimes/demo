@@ -2,36 +2,37 @@
 
 {% block content %}
 <div class="content-section">
+    <div class="carousel">
+        <button class="carousel-btn left" id="prevBtn">
+            <span class="material-symbols-outlined">
+                arrow_back
+            </span>
+        </button>
+
+        <div class="carousel-slide" id="carouselSlide-1">
+            <img src="https://media.jerryly.cn/carousel-1.webp" alt="img-1" class="carousel-image">
+            <img src="https://media.jerryly.cn/carousel-2.webp" alt="img-2" class="carousel-image">
+            <img src="https://media.jerryly.cn/carousel-3.webp" alt="img-3" class="carousel-image">
+            <img src="https://media.jerryly.cn/carousel-4.webp" alt="img-4" class="carousel-image">
+            <img src="https://media.jerryly.cn/carousel-5.webp" alt="img-5" class="carousel-image">
+        </div>
+
+        <button class="carousel-btn right" id="nextBtn">
+            <span class="material-symbols-outlined">
+                arrow_forward
+            </span>
+        </button>
+    </div>
     <section class="content-sub">
+
         <div id="subscribe-popup">
             <div id="subscribe">
-                <p class="normal-text">subscribe to us to get real-time updates</p>
+                <p class="normal-text">subscribe to our free newsletter</p>
                 <div id="subscribe-input-section">
                     <input type="email" id="subscribe-input">
                     <button type="submit"><span class="material-symbols-outlined">arrow_forward</span></button>
                 </div>
             </div>
-        </div>
-        <div class="carousel">
-            <button class="carousel-btn left" id="prevBtn">
-                <span class="material-symbols-outlined">
-                    arrow_back
-                </span>
-            </button>
-
-            <div class="carousel-slide" id="carouselSlide">
-                <img src="https://media.jerryly.cn/carousel-1.webp" alt="img-1" class="carousel-image">
-                <img src="https://media.jerryly.cn/carousel-2.webp" alt="img-2" class="carousel-image">
-                <img src="https://media.jerryly.cn/carousel-3.webp" alt="img-3" class="carousel-image">
-                <img src="https://media.jerryly.cn/carousel-4.webp" alt="img-4" class="carousel-image">
-                <img src="https://media.jerryly.cn/carousel-5.webp" alt="img-5" class="carousel-image">
-            </div>
-
-            <button class="carousel-btn right" id="nextBtn">
-                <span class="material-symbols-outlined">
-                    arrow_forward
-                </span>
-            </button>
         </div>
         <div id="index-title-section">
             <div id="index-title">
@@ -39,6 +40,10 @@
             </div>
             <p class="normal-text second-text">
                 the coolest content for everyone who loves horses
+            </p>
+            <p class="normal-text second-text">
+                the following is a curated list spotlighting the best creators in the horse world! please support them
+                by subscribing to their YouTube Channels and follow on social media!
             </p>
         </div>
         <div class="normal-text index-subtitle">
@@ -53,13 +58,64 @@
                 <li class="posts-categ">Rider's Lounge</li>
             </ul>
         </div>
-        <a href="./pages/sample.html">
-            <div class="post-card">
-                <div class="post-card-example normal-text">
-                    Example of a story
+        <div id="posts-list">
+            <a href="./pages/sample.html" class="post-thumbnail">
+                <div class="post-card" id="post-card-1">
+                    <div class="post-card-example normal-text">
+                        Example of a story
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+            <a href="./pages/sample.html" class="post-thumbnail">
+                <div class="post-card" id="post-card-2">
+                    <div class="post-card-example normal-text">
+                        Example of a story
+                    </div>
+                </div>
+            </a>
+            <a href="./pages/sample.html" class="post-thumbnail">
+                <div class="post-card" id="post-card-3">
+                    <div class="post-card-example normal-text">
+                        Example of a story
+                    </div>
+                </div>
+            </a>
+            <a href="./pages/sample.html" class="post-thumbnail">
+                <div class="post-card" id="post-card-4">
+                    <div class="post-card-example normal-text">
+                        Example of a story
+                    </div>
+                </div>
+            </a>
+            <a href="./pages/sample.html" class="post-thumbnail">
+                <div class="post-card" id="post-card-5">
+                    <div class="post-card-example normal-text">
+                        Example of a story
+                    </div>
+                </div>
+            </a>
+            <a href="./pages/sample.html" class="post-thumbnail">
+                <div class="post-card" id="post-card-6">
+                    <div class="post-card-example normal-text">
+                        Example of a story
+                    </div>
+                </div>
+            </a>
+            <a href="./pages/sample.html" class="post-thumbnail">
+                <div class="post-card" id="post-card-7">
+                    <div class="post-card-example normal-text">
+                        Example of a story
+                    </div>
+                </div>
+            </a>
+            <a href="./pages/sample.html" class="post-thumbnail">
+                <div class="post-card" id="post-card-8">
+                    <div class="post-card-example normal-text">
+                        Example of a story
+                    </div>
+                </div>
+            </a>
+        </div>
     </section>
     <hr>
     <section class="content-sub">
@@ -73,7 +129,7 @@
                 </span>
             </button>
 
-            <div class="carousel-slide" id="carouselSlide">
+            <div class="carousel-slide" id="carouselSlide-2">
                 <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/3-2d3ea78.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
                     alt="img-1" class="carousel-image">
                 <img src="https://img1.wsimg.com/isteam/ip/29cab163-a29f-441b-becc-478210f45839/Tristram%20Hokenson%20%2813%29.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1080,cg:true"
@@ -122,104 +178,97 @@
         <p class="normal-text second-text">
             today's youtuber highlight
         </p>
-        <iframe width="444" height="222" src="https://www.youtube.com/embed/1e6cmsiLKmo"
-            title="How Colorado Horse Rescue Is Forging a Future Where Hope Lives" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="444" height="222" src="https://www.youtube.com/embed/8dB6qDYB8nI"
-            title="CSI5* Major League Showjumping Greenwich - Jump Off" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
-    <hr>
-    <section class="content-sub">
-        <p class="normal-text second-text">
-            check out our latest original series
-        </p>
-        <div class="generic-image-wrapper">
-            <div class="generic-image" id="g-i-1"></div>
+        <div id="today-list">
+            <iframe width="444" height="222" src="https://www.youtube.com/embed/1e6cmsiLKmo"
+                title="How Colorado Horse Rescue Is Forging a Future Where Hope Lives" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="444" height="222" src="https://www.youtube.com/embed/8dB6qDYB8nI"
+                title="CSI5* Major League Showjumping Greenwich - Jump Off" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
     <hr>
     <section class="content-sub">
         <div class="collection-exhibit-wrap">
             <span class="normal-text first-text">
-                YouTube video collection
+                explore the streamhorse world
             </span>
             <div class="collection-exhibit-wrapper">
                 <div class="collection-exhibit">
-                    <a href="https://streamhorse.tv/life" class="collection-exhibit-link">
-                        <span class="normal-text second-text">
-                            Life
-                        </span>
-                        <span class="material-symbols-outlined">arrow_forward</span>
-                    </a>
                     <iframe width="444" height="222" src="https://www.youtube.com/embed/sUVJmd4Xcjw"
                         title="A Day in the Life of Modern COWBOYS in MONTANA - What it&#39;s Like!" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="collection-exhibit">
-                    <a href="https://streamhorse.tv/compete" class="collection-exhibit-link">
+                    <a href="https://streamhorse.tv/life" class="collection-exhibit-link">
                         <span class="normal-text second-text">
-                            Compete
+                            see more lifestyle horse videos
                         </span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
+                </div>
+                <div class="collection-exhibit">
                     <iframe width="444" height="222" src="https://www.youtube.com/embed/pwNGyBU7Phg"
                         title="Laura Collett &amp; London 52 claiming the European crown 👑 | Agria FEI Eventing European Championship"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="collection-exhibit">
-                    <a href="https://streamhorse.tv/fun" class="collection-exhibit-link">
+                    <a href="https://streamhorse.tv/compete" class="collection-exhibit-link">
                         <span class="normal-text second-text">
-                            Fun
+                            see more competition horse videos
                         </span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
+                </div>
+                <div class="collection-exhibit">
                     <iframe width="444" height="222" src="https://www.youtube.com/embed/PHrvfugEftQ"
                         title="ENZO &amp; I JUMP OUR FIRST CLEAR ROUND XC" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="collection-exhibit">
-                    <a href="https://streamhorse.tv/work" class="collection-exhibit-link">
+                    <a href="https://streamhorse.tv/fun" class="collection-exhibit-link">
                         <span class="normal-text second-text">
-                            Work
+                            see more fun horse videos
                         </span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
+                </div>
+                <div class="collection-exhibit">
                     <iframe width="444" height="222" src="https://www.youtube.com/embed/pwNGyBU7Phg"
                         title="Laura Collett &amp; London 52 claiming the European crown 👑 | Agria FEI Eventing European Championship"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="collection-exhibit">
-                    <a href="https://streamhorse.tv/discipline" class="collection-exhibit-link">
+                    <a href="https://streamhorse.tv/work" class="collection-exhibit-link">
                         <span class="normal-text second-text">
-                            Discipline
+                            see more work horse videos
                         </span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
+                </div>
+                <div class="collection-exhibit">
                     <iframe width="444" height="222" src="https://www.youtube.com/embed/2cGrD0rGB6Y"
                         title="Watch the $10,000 IDA Development Grand Prix" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="collection-exhibit">
-                    <a href="https://streamhorse.tv/train" class="collection-exhibit-link">
+                    <a href="https://streamhorse.tv/discipline" class="collection-exhibit-link">
                         <span class="normal-text second-text">
-                            Train
+                            see more discipline horse videos
                         </span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
+                </div>
+                <div class="collection-exhibit">
                     <iframe width="444" height="222" src="https://www.youtube.com/embed/_0S_F9vRSbE"
                         title="Bored Horse Hacks! (Easy Exercises)" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a href="https://streamhorse.tv/train" class="collection-exhibit-link">
+                        <span class="normal-text second-text">
+                            see more training horse videos
+                        </span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -240,53 +289,53 @@
         <div class="collection-exhibit-wrap">
             <div class="collection-exhibit-wrapper">
                 <div class="collection-exhibit">
-                    <a href="https://streamhorse.tv/breed" class="collection-exhibit-link">
-                        <span class="normal-text second-text">
-                            Breed
-                        </span>
-                        <span class="material-symbols-outlined">arrow_forward</span>
-                    </a>
                     <iframe width="444" height="222" src="https://www.youtube.com/embed/LYS_IEFVSrE"
                         title="Top 5 Bloodlines That Changed Horse Racing Forever!" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="collection-exhibit">
-                    <a href="https://streamhorse.tv/art" class="collection-exhibit-link">
+                    <a href="https://streamhorse.tv/breed" class="collection-exhibit-link">
                         <span class="normal-text second-text">
-                            Art
+                            see more breed horse videos
                         </span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
+                </div>
+                <div class="collection-exhibit">
                     <iframe width="444" height="222" src="https://www.youtube.com/embed/Aylxmmscu5I"
                         title="How Horse Photos Come to Life" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="collection-exhibit">
-                    <a href="https://streamhorse.tv/heal" class="collection-exhibit-link">
+                    <a href="https://streamhorse.tv/art" class="collection-exhibit-link">
                         <span class="normal-text second-text">
-                            Heal
+                            see more art horse videos
                         </span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
+                </div>
+                <div class="collection-exhibit">
                     <iframe width="444" height="222" src="https://www.youtube.com/embed/3iusNx_pqyQ"
                         title="CAST Removal for ARCHIE!" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="collection-exhibit">
-                    <a href="https://streamhorse.tv/give" class="collection-exhibit-link">
+                    <a href="https://streamhorse.tv/heal" class="collection-exhibit-link">
                         <span class="normal-text second-text">
-                            Give
+                            see more healing horse videos
                         </span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
+                </div>
+                <div class="collection-exhibit">
                     <iframe width="444" height="222" src="https://www.youtube.com/embed/w3uC24EKkrw"
                         title="What has CHANGED at Tenerife Horse Rescue? - We are back with FINCA LIFE 2025 🐎"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a href="https://streamhorse.tv/give" class="collection-exhibit-link">
+                        <span class="normal-text second-text">
+                            see more giving horse videos
+                        </span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -317,6 +366,19 @@
             index = (index - 1 + totalSlides) % totalSlides;
             updateSlide();
         });
+    });
+    window.addEventListener('DOMContentLoaded', () => {
+        const slide = document.getElementById('carouselSlide-1');
+        const images = slide.querySelectorAll('.carousel-image');
+
+        let autoIndex = 0;
+
+        function autoUpdate() {
+            autoIndex = (autoIndex + 1) % images.length;
+            slide.style.transform = `translateX(-${autoIndex * 100}%)`;
+        }
+
+        setInterval(autoUpdate, 3000); // every 3 seconds
     });
 </script>
 
