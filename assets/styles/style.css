@@ -401,7 +401,12 @@ body {
     gap: 10px;
     overflow-x: scroll;
     overflow-y: hidden;
+    scrollbar-width: none;
     border-radius: 6px;
+}
+
+#posts-list::webkit-scrollbar {
+    height: 0;
 }
 
 #friends-list {
