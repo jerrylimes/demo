@@ -1,0 +1,33 @@
+Stan's Hot Dog Stand Answers:
+
+Scope 1: Propane = 902.98 kg of CO2
+
+598 x 1.51 = 902.98 kg of CO2
+
+
+
+Scope 2: Electrical Appliances = 475.9716 kg CO2
+
+sum of (east_coast_g_per_kwh * electricity_kwh / 1000) for all 2 hour increments = 475,971.6 / 1000 = 475.9716 kg CO2
+
+
+
+Scope 3: Cloud Computing = 365.8 kg CO2
+
+sum of (midwest_g_per_kwh * cloud_kwh / 1000) for all 2 hour increments = 365,800 / 1000 = 365.8 kg CO2
+
+
+Total Carbon Footprint For March = 1744.7516 kg CO2
+% of Total Carbon Footprint Attributed to Computing = 20.97%
+
+
+Potential savings -> time shifting cloud job to cleaner carbon intensity 
+shift the job from 2pm-4pm to 8am-10am.
+
+Cloud Computing With Optimized Time = sum of (midwest_g_per_kwh * cloud_kwh / 1000) for all 2 hour increments = 170,500 / 1000 = 170.5 kg CO2
+
+New % of Total Carbon Footprint Attributed to Computing = 170.5 / 1549.4516 = 11% -> 9.97% Reduction in total carbon emmissions
+
+
+
+

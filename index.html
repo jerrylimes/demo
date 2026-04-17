@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study Hub</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Source Sans 3', sans-serif;
+      display: flex;
+      height: 100vh;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(14, 116, 144, 0.18), transparent 26%),
+        radial-gradient(circle at 90% 82%, rgba(59, 130, 246, 0.14), transparent 30%),
+        #eef2f7;
+      color: #0f172a;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: #1e293b;
+      color: white;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar button {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: none;
+      background: #334155;
+      color: white;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .sidebar button:hover {
+      background: #475569;
+    }
+
+    /* Lighter button for Instructions */
+    .instructions-btn {
+      background: #64748b;
+    }
+
+    .instructions-btn:hover {
+      background: #94a3b8;
+    }
+
+    .content {
+      flex: 1;
+      padding: 28px;
+      overflow-y: auto;
+    }
+
+    .content h1 {
+      margin: 0 0 18px;
+      font-family: 'Fraunces', serif;
+      font-size: 34px;
+      letter-spacing: 0.2px;
+      color: #0b2a44;
+    }
+
+    .content h2,
+    .content h3,
+    .content h4 {
+      font-family: 'Fraunces', serif;
+      color: #16324f;
+    }
+
+    .accordion {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border-radius: 14px;
+      margin-bottom: 14px;
+      border: 1px solid #d8e2ee;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      padding: 16px 18px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.2px;
+      color: #0f2d47;
+      border-bottom: 1px solid #e3ebf3;
+      transition: background-color 180ms ease;
+    }
+
+    .accordion-header:hover {
+      background: #f1f7ff;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 18px;
+    }
+
+    .section-description {
+      margin: 0;
+      max-width: 86ch;
+      font-size: 17px;
+      line-height: 1.76;
+      color: #10253b;
+      text-wrap: pretty;
+      font-feature-settings: "liga" 1, "kern" 1;
+    }
+
+    .instructions-panel {
+      max-width: 88ch;
+      background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+      border: 1px solid #d6e4f3;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+    }
+
+    .instructions-panel h2 {
+      margin: 22px 0 10px;
+      font-size: 24px;
+      color: #0d3558;
+    }
+
+    .instructions-lead {
+      margin: 0 0 12px;
+      font-size: 17px;
+      line-height: 1.72;
+      color: #10253b;
+    }
+
+    .instructions-list {
+      margin: 0;
+      padding-left: 22px;
+      color: #10253b;
+    }
+
+    .instructions-list li {
+      margin-bottom: 10px;
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    .section-paragraph {
+      margin: 0 0 1.05em;
+    }
+
+    .section-paragraph:first-child::first-letter {
+      float: left;
+      font-family: 'Fraunces', serif;
+      font-size: 2.2em;
+      line-height: 0.85;
+      margin: 0.08em 0.18em 0 0;
+      color: #0d4b7a;
+    }
+
+    .subsection-title {
+      margin: 16px 0 10px;
+      font-size: 20px;
+      color: #0d3558;
+    }
+
+    .file-grid {
+      margin-top: 16px;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .file-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #cfe0ef;
+      background: linear-gradient(160deg, #f8fcff 0%, #eef6ff 100%);
+      text-decoration: none;
+      transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+    }
+
+    .file-card:hover {
+      transform: translateY(-2px);
+      border-color: #7caad3;
+      box-shadow: 0 10px 20px rgba(9, 31, 56, 0.12);
+    }
+
+    .file-icon {
+      min-width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: #0f4b7d;
+      color: #f0f8ff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    .file-copy {
+      min-width: 0;
+      color: #0d2c47;
+    }
+
+    .file-name {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f2f4c;
+    }
+
+    .file-meta {
+      margin: 2px 0 0;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      color: #2d5b81;
+      text-transform: uppercase;
+    }
+
+    .active .accordion-content {
+      display: block;
+      animation: reveal 220ms ease-out;
+    }
+
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        transform: translateY(-3px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 820px) {
+      body {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+      }
+
+      .sidebar {
+        width: auto;
+      }
+
+      .content {
+        padding: 18px;
+      }
+
+      .content h1 {
+        font-size: 28px;
+      }
+
+      .section-description {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Navigation</h2>
+
+    <button class="instructions-btn" onclick="loadInstructions()">Instructions</button>
+
+    <h2>Companies</h2>
+    <button onclick="loadCompany('companyA')">Meridian Trust Bank</button>
+    <button onclick="loadCompany('companyB')">Stan's Hot Dog Stand</button>
+  </div>
+
+  <div class="content" id="content">
+    <!-- Default landing content -->
+  </div>
+
+  <script>
+    const data = {
+      companyA: {
+        name: "Meridan Trust Bank",
+        sections: [
+          {
+            title: 'Business Overview',
+            description: `Meridian Trust Bank is a small regional financial institution with all of its buildings operating within a single Midwestern state. Founded in 1987, the bank currently serves approximately 45,000 retail customers and 3,500 small business accounts across three physical branch locations. Its primary services include personal banking, small business lending, mortgages, and basic wealth management.
+
+The bank has historically prioritized customer trust and operational stability over rapid technological change, and has a strict privacy policy. As a result, its internal systems reflect years of incremental updates rather than large-scale modernization efforts. While this approach has minimized risk, it has also led to a fragmented technology stack composed of legacy platforms, newer add-ons, and redundant processes.
+
+In recent years, Meridian Trust has begun to feel pressure from rising energy costs, increased competition from digital-first banks, and growing expectations around sustainability reporting. Leadership has expressed interest in improving efficiency but remains cautious about changes that could impact system reliability or regulatory compliance.`,
+          files: [
+              { name: "Privacy Policy", path: "docx_files/MeridianPrivacyPolicy.docx" },
+            ],
+          },
+          {
+            title: "Data Centers",
+            description: `To comply with its internal data privacy standards, Meridian Trust operates its own on-premises data center located near its headquarters. This facility supports all core banking operations and stores sensitive customer data. Despite the critical role of this infrastructure, utilization remains relatively low. Most systems are provisioned to handle peak demand but typically operate well below capacity. Older servers have been retained alongside newer hardware, leading to inconsistent performance and reduced overall efficiency. Cooling is provided by a traditional air conditioning system that runs continuously at a fixed level. 
+
+The bank also maintains a secondary backup site within the state, which functions as a small, dedicated data center for disaster recovery purposes. This facility includes its own servers, storage systems, networking equipment, and supporting infrastructure such as power and cooling. While its role is to provide redundancy in the event of a failure at the primary site, the environment is kept fully powered and operational at all times, despite being used infrequently under normal conditions.
+
+Data from the primary data center is replicated to this backup site on a nightly basis, with large volumes of data transferred regardless of how much has changed since the previous update.`,
+            files: [
+              { name: "Data Center Energy Data", path: "csv_files/DataCenterEnergy.csv" },
+              { name: "Data Center Upgrades", path: "docx_files/DataCenterUpgrades.docx" }
+            ]
+          },
+          {
+            title: "Energy Usage",
+            description: `Meridian Trust has recently begun tracking its energy usage in more detail and now collects 5-minute interval time-series data for electricity consumption at the data center level. This dataset provides a granular view of power usage patterns throughout the day, but does not include peaks associated with scheduled workloads.
+
+Initial observations from internal reports show that energy usage remains relatively steady over time, with limited variation between peak business hours and off-peak periods, however, processing jobs such as fraud detection, reporting, and backups create noticeable spikes in demand.
+
+Despite having access to detailed energy data, the bank does not yet integrate this information into operational decision-making. Workloads are scheduled at fixed times, and there is no attempt to shift computation based on energy demand, system load, or external factors like grid carbon intensity. Additional inefficiencies are present at the application level. Some systems repeatedly store entire datasets instead of incremental updates.`,
+            files: [
+              { name: "Grid Carbon Intensity Data", path: "csv_files/CarbonIntensity.csv" },
+              { name: "Fleet Fuel Data", path: "csv_files/Fuel.csv" },
+              { name: "Building Energy Data", path: "csv_files/BuildingEnergy.csv" }
+            ]
+          },
+          {
+            title: "Cloud Computing",
+            description: `Meridian Trust has taken a cautious approach to cloud computing. Due to its internal data privacy policies, all sensitive workloads, including core banking systems and customer data, remain on-premises.
+
+However, the bank has begun experimenting with limited cloud adoption for non-sensitive use cases. There is growing internal discussion about which jobs could be switched to the cloud to provide benefits without violating privacy constraints.
+
+Because the bank operates in a central U.S. location, it is geographically well-positioned to take advantage of cloud demand shifting between East and West Coast data centers, where energy availability and carbon intensity may vary throughout the day. There isn't a difference in network latency or cost between one coast of the other.
+
+A lack of internal expertise, combined with risk-averse decision-making, has slowed progress in this area. As a result, many opportunities to improve efficiency and sustainability through cloud or hybrid solutions remain underutilized.`,
+            files: [
+              { name: "Cloud Jobs Data", path: "csv_files/CloudJobs.csv" },
+              { name: "Cloud Information", path: "docx_files/CloudResources.docx" }
+            ]
+          },
+          {
+            title: "Restrictions",
+            description: `The following restrictions apply to any proposed solutions for improving the bank's carbon efficiency.
+
+            - The privacy policy must be adhered to and cannot be changed.
+
+            - The bank's physical data centers must continue to operate and cannot be decommissioned.
+
+            - The bank's primary data center must be upgraded, and no previous eqipment can be kept.
+
+            - The bank's cloud computing capacity on either coast cannot be increased.
+
+            - The CU of a job, or the sum of multiple jobs' CU, must be less than or equal to the total CU of the data center the job or jobs are running on.`
+          },
+          {
+            title: "Assumptions",
+            description: `The following assumptions can be made.
+
+            - BuildingData.csv does not contain any electrical cost from computing.
+
+            - Generator emmissions are classified as scope 1.
+            
+            - If needed, a reasonable average can be used for any missing data points in the provided datasets.`
+          },
+        ]
+      },
+      companyB: {
+        name: "Stan's Hot Dog Stand",
+        sections: [
+          {
+            title: "Business Overview",
+            description: `Stan’s Hot Dog Stand is a small, single-location food stand in New York that serves customers throughout the day, with peak demand during lunch and early evening hours. The stand relies on propane for cooking and electricity for refrigeration, lighting, and basic operations.
+
+In addition to food service, Stan tracks daily sales and inventory data to better understand customer behavior. This data is processed once per day using a simple cloud-based system.
+
+Stan is interested in understanding the environmental impact of his business, including both physical operations and computing-related emissions.`,
+            files: []
+          },
+          {
+            title: "Data Centers",
+            description: `Stan’s Hot Dog Stand does not operate any physical data centers. All computing is handled through a cloud provider located in the Midwest region.
+
+There are no alternative regions currently in use, and all data processing jobs are executed in this single location.`,
+            files: []
+          },
+          {
+            title: "Energy Usage",
+            description: `Stan’s emissions come from three primary sources:
+
+Scope 1:
+
+Propane is used daily to power grills and cooking equipment. This is the largest direct source of emissions for the business.
+
+Emissions are calculated using a fixed emission factor per liter
+
+
+
+Scope 2:
+
+Electricity powers refrigeration, lighting, and other equipment at the stand.
+
+Emissions depend on the carbon intensity of the local grid
+
+
+
+Scope 3:
+
+Stan runs a daily cloud job to process sales data.
+
+The job uses 20 kWh of electricity per day for 2 hours, and emissions depend on when the job runs and the grid carbon intensity at that time.`,
+            files: [
+              { name: "Carbon Intensity", path: "csv_files/CarbonIntensity.csv" },
+              { name: "Propane", path: "csv_files/StanScope1.csv" },
+              { name: "Electrical Applicances", path: "csv_files/StanScope2.csv" }
+
+            ],
+            
+          },
+          {
+            title: "Cloud Computing",
+            description: `Stan operates a single cloud-based job:
+
+daily_sales_analysis
+
+Start Time: 2:00 PM
+
+Duration: 2 hours
+
+Energy Use: 20 kWh
+
+Region: Midwest
+
+The job currently runs at a fixed time each day and does not adjust based on energy conditions.`,
+            files: [
+              { name: "Cloud", path: "csv_files/StanScope3.csv" }
+            ]
+          },
+          {
+            title: "Restrictions",
+            description: `The following restrictions apply to any proposed solutions for improving the stand's carbon efficiency. 
+
+            - The job must run once per day
+
+- The job must complete before midnight
+
+- The job must remain in the Midwest region
+
+- The job’s total energy use (20 kWh) does not change
+
+- Only the start time of the job can be adjusted`,
+            files: []
+          },
+          {
+            title: "Assumptions",
+            description: `The following assumptions can be made.
+
+            - Propane emissions are calculated using a constant emission factor of 1.51 kg of CO2 per liter of propane consumed
+
+- Electricity emissions depend on provided carbon intensity data
+
+- The cloud job consumes 20 kWh regardless of timing
+
+- Stan is able to change when the cloud job runs, but not how it runs`,
+            files: []
+          }
+        ]
+      }
+    };
+
+    function loadInstructions() {
+      const container = document.getElementById('content');
+
+      container.innerHTML = `
+        <div class="instructions-panel">
+          <h1>Objectives</h1>
+          <p class="instructions-lead"><strong>Part One:</strong> Analyze the company data provided for Meridian Trust Bank and develop a carbon footprint.</p>
+          <p class="instructions-lead"><strong>Part Two:</strong> Using this footprint as a baseline, develop a proposal for Meridian Trust Bank that reduces carbon release without violating any rules of the bank.</p>
+
+          <h2>What to do</h2>
+          <ol class="instructions-list">
+            <li>Review the provided data for each company section, make sure to read all available resources, and download all files.</li>
+            <li>Produce a Carbon Assessment, which is a summary report of Scope 1, 2, and 3 carbon emissions produced by the bank.</li>
+            <li>Devise a Computing Carbon Footprint, which is the percentage of emissions in the assessment related to ICT.</li>
+            <li>Produce a Recommendations document, which identifies opportunities in the business ICT to reduce Meridian Trust Bank's carbon footprint.</li>
+            <li>Devise one set of recommendations that are at no additional cost, if any, and a second set that would require investment.</li>
+          </ol>
+        </div>
+      `;
+    }
+
+    function formatSummary(text) {
+      return String(text || "")
+        .split('\n')
+        .map(line => line.trim())
+        .join('\n')
+        .trim();
+    }
+
+    function escapeHtml(text) {
+      return String(text || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/\"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function formatDescriptionHtml(text) {
+      const formatted = formatSummary(text);
+      const paragraphs = formatted
+        .split(/\n\s*\n/)
+        .map(block => block.replace(/\n/g, ' ').trim())
+        .filter(Boolean);
+
+      if (!paragraphs.length) {
+        return "";
+      }
+
+      return paragraphs
+        .map(block => `<p class="section-paragraph">${escapeHtml(block)}</p>`)
+        .join('');
+    }
+
+    function getFileType(path) {
+      const cleanPath = String(path || '').split('?')[0].split('#')[0];
+      const index = cleanPath.lastIndexOf('.');
+      if (index === -1) {
+        return 'file';
+      }
+      return cleanPath.slice(index + 1).toLowerCase() || 'file';
+    }
+
+    function renderFileCards(files) {
+      const safeFiles = files || [];
+      if (!safeFiles.length) {
+        return '';
+      }
+
+      return `
+        <div class="file-grid">
+          ${safeFiles.map(file => {
+            const type = getFileType(file.path);
+            const iconLabel = escapeHtml(type.slice(0, 4));
+            return `
+              <a class="file-card" href="${encodeURI(file.path)}" download>
+                <span class="file-icon">${iconLabel}</span>
+                <span class="file-copy">
+                  <p class="file-name">${escapeHtml(file.name)}</p>
+                  <p class="file-meta">${escapeHtml(type)} file - click to download</p>
+                </span>
+              </a>
+            `;
+          }).join('')}
+        </div>
+      `;
+    }
+
+    function loadCompany(key) {
+      const company = data[key];
+      const container = document.getElementById('content');
+
+      if (!company) {
+        container.innerHTML = `<p>Company data is unavailable.</p>`;
+        return;
+      }
+
+      let html = `<h1>${company.name}</h1>`;
+
+      company.sections.forEach(section => {
+        html += `
+          <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              ${section.title}
+            </div>
+            <div class="accordion-content">
+              <div class="section-description">${formatDescriptionHtml(section.description)}</div>
+              ${(section.subsections || []).map(sub => `
+                <h4 class="subsection-title">${sub.title}</h4>
+                <div class="section-description">${formatDescriptionHtml(sub.description)}</div>
+              `).join('')}
+              ${renderFileCards(section.files)}
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function toggleAccordion(header) {
+      const parent = header.parentElement;
+      parent.classList.toggle('active');
+    }
+
+    // Load instructions by default on page load
+    window.onload = loadInstructions;
+  </script>
+
+</body>
+</html>

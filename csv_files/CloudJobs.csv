@@ -1,0 +1,9 @@
+Start time,Job Name,Region,Electricity Cost (kWh)
+1:30 am,fraud_detection_batch,midwest,120
+9:30 pm,daily_reporting,midwest,90
+5:00 am,data_backup_transfer,midwest,150
+6:00 pm,customer_analytics,midwest,100
+6:00 pm,email_notifications,east,40
+7:00 am,web_traffic_processing,west,60
+2:30 pm,dev_test_environments,west,50
+1:00 pm,dashboard_refresh_jobs,midwest,30
