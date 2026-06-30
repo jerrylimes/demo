@@ -493,3 +493,77 @@
         border-bottom-color: #333;
     }
 }
+
+#demo-project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    font-family: "Charter", "Source Han Serif", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.text-n {
+    font-family: "Charter", "Source Han Serif", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.project-thumbnail {
+    padding: 10px;
+    border: solid 1px #eee;
+    border-radius: 16px;
+}
+
+.project-thumbnail-img {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    border: solid 1px #eee;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-thumbnail-img .material-symbols-outlined {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.demo-no-app-icon {
+    width: 50px;
+    height: 50px;
+    scale: 114%;
+}
+
+.project-name {
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.project-description,
+.project-trailing {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.project-trailing {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.project-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.project-links .material-symbols-outlined {
+    font-size: 18px;
+}
